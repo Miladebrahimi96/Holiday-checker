@@ -26,16 +26,21 @@ submit.addEventListener('click', e => {
     holiday()
         .then(data => {
             const holiday = data.response.holidays;
-            for(i = 0; i < holiday.length; i++ ){
-                const name = holiday[i].name;
-                const description = holiday[i].description;
-                const showDate = holiday[i].date.iso;
+            if(holiday.length !== 0){
+                for(i = 0; i < holiday.length; i++ ){
+                    const name = holiday[i].name;
+                    const description = holiday[i].description;
+                    const showDate = holiday[i].date.iso;
+                    holidayTitle.style.display = "block";
+                    holidayTitle.innerText = name;
+                    holidayDesc.style.display = "block";
+                    holidayDesc.innerText = description;
+                    holidayDate.style.display = "block";
+                    holidayDate.innerText = showDate;
+                }
+            }else {
                 holidayTitle.style.display = "block";
-                holidayTitle.innerText = name;
-                holidayDesc.style.display = "block";
-                holidayDesc.innerText = description;
-                holidayDate.style.display = "block";
-                holidayDate.innerText = showDate;
+                holidayTitle.innerText = 'No holidays found';
             }
             console.log(holiday)
         })
