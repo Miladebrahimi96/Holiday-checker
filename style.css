@@ -45,8 +45,13 @@ label {
     padding: 8px 16px;
     border-radius: 5px;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 500;
 }
+
+.date-container input {
+    letter-spacing: 2px;
+}
+
 .date-container input:focus {
     outline:2px solid #2d3436;
 }
