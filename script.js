@@ -22,6 +22,7 @@ const holiday = async () => {
 }
 
 submit.addEventListener('click', e => {
+    clearHoliday();
     holiday()
         .then(data => {
             const holiday = data.response.holidays;
@@ -40,3 +41,11 @@ submit.addEventListener('click', e => {
         })
 });
 
+const clearHoliday = () => {
+    holidayTitle.style.display = "hidden";
+    holidayTitle.innerText = '';
+    holidayDesc.style.display = "hidden";
+    holidayDesc.innerText = '';
+    holidayDate.style.display = "hidden";
+    holidayDate.innerText = '';
+}
