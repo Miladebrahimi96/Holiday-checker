@@ -66,6 +66,23 @@ label {
     display: hidden;
 }
 
+button {
+    display: block;
+    margin: auto;
+    background-color: #e6e6e6;
+    border: none;
+    padding: 8px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color .3s linear, color .3s linear;
+}
+button:hover {
+    background-color: #d63031;
+    color: #ccc;
+}
+
 @media (max-width:650px) {
     .title {
         font-size: 1.5rem;
