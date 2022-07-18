@@ -70,7 +70,7 @@ label {
     color: #e6e6e6;
     font-size: 1rem;
     display: hidden;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 button {
@@ -94,5 +94,19 @@ button:hover {
     .title {
         font-size: 1.5rem;
         text-align: center;
+    }
+}
+@media (max-width: 400px) {
+    .title {
+        margin: 10px;
+    }
+    label {
+        margin: 10px;
+    }
+    .holiday-title {
+        margin: 10px;
+    }
+    .holiday-description , .holiday-date {
+        margin-bottom: 5px;
     }
 }
