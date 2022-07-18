@@ -3,6 +3,7 @@ const date = document.querySelector('#date');
 const submit = document.querySelector('button');
 const holidayTitle = document.querySelector('.holiday-title');
 const holidayDesc = document.querySelector('.holiday-description');
+const holidayDate = document.querySelector('.holiday-date');
 
 
 const holiday = async () => {
@@ -27,10 +28,13 @@ submit.addEventListener('click', e => {
             for(i = 0; i < holiday.length; i++ ){
                 const name = holiday[i].name;
                 const description = holiday[i].description;
+                const showDate = holiday[i].date.iso;
                 holidayTitle.style.display = "block";
                 holidayTitle.innerText = name;
                 holidayDesc.style.display = "block";
                 holidayDesc.innerText = description;
+                holidayDate.style.display = "block";
+                holidayDate.innerText = showDate;
             }
             console.log(holiday)
         })
